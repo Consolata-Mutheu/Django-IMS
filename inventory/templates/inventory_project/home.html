@@ -1,0 +1,26 @@
+{% extends 'includes/base.html' %} 
+
+{% block title %}Home - Inventory Management System{% endblock %} 
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Inventory Management System</h1>
+        <p class="lead">Manage your inventory efficiently with our system.</p>
+        <hr class="my-4">
+        <p>This system allows you to:</p>
+        <ul>
+            <li>View and manage your inventory items.</li>
+            <li>Access the Admin Panel to control your data.</li>
+            <li>Utilize API endpoints for integrations.</li>
+            <li>Run tests to ensure functionality.</li>
+        </ul>
+        <p>For more information, go to the <a href="https://github.com/gydox/django-ims/blob/main/README.md" target="_blank">README documentation</a>.</p>
+
+        <a class="btn btn-primary btn-lg" href="/admin" role="button">Go to Admin Panel</a>
+
+
+    </div>
+
+
+{% endblock %}
+

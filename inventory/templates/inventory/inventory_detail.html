@@ -1,0 +1,16 @@
+
+{% extends 'includes/base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">Inventory Detail - {{ inventory.name }}</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Name:</strong> {{ inventory.name }}</li>
+    <li class="list-group-item"><strong>Description:</strong> {{ inventory.description }}</li>
+    <li class="list-group-item"><strong>Note:</strong> {{ inventory.note }}</li>
+    <li class="list-group-item"><strong>Stock:</strong> {{ inventory.stock }}</li>
+    <li class="list-group-item"><strong>Availability:</strong> {% if inventory.availability %}Available{% else %}Not Available{% endif %}</li>
+    <li class="list-group-item"><strong>Supplier:</strong> {{ inventory.supplier.name }}</li>
+</ul>
+
+{% endblock %}

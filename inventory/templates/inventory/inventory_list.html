@@ -1,0 +1,26 @@
+
+{% extends 'includes/base.html' %}
+
+{% block content %}
+
+<h1>Inventory List</h1>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Supplier</th>
+            <th>Availability</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for inventory in inventories %}
+        <tr>
+            <td><a href="{% url 'inventory_detail' inventory.id %}" class="text-decoration-none">{{ inventory.name }}</a></td>
+            <td>{{ inventory.supplier.name }}</td>
+            <td>{% if inventory.availability %}<span class="badge badge-success">Available</span>{% else %}<span class="badge badge-danger">Not Available</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
